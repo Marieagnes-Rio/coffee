@@ -1,0 +1,327 @@
+/* Write some CSS below */
+
+body{
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: black;
+  background-color: white;
+  margin: 0px;
+  text-align: center;
+}
+
+nav{
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 15px 25px;
+  background: #fafafa;
+  box-shadow: inset 0px -1px 0px #c5c5c6;
+}
+
+.nav-icon {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.nav-icon span {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 25px;
+  margin-left: 10px;
+  font-weight: 400;
+  color: #333;
+}
+
+.nav-icon img{
+  width: 40px;
+  transform: rotate(-10deg) translateX(5px);
+}
+
+.hamburger{
+  display: none;
+}
+
+.navlinks-container a {
+  margin: 0 10px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #414141;
+  display: inline-block;
+  position: relative;
+}
+
+.navlinks-container a::after{
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #333;
+  transition: transform 0.3s ease-out;
+}
+
+.navlinks-container a:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-authentification{
+  margin-left: auto;
+}
+
+.sign-btns button{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  min-width: 90px;
+  padding: 10px 5px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.sign-btns button:nth-child(2) {
+  border: none;
+  background: rgb(146,195,238,0.718);
+}
+
+.sign-user{
+  display: none;
+}
+
+@media (max-width: 900px) {
+  nav {
+    padding: 15px 20px;
+    position: relative;
+  }
+
+  .nav-icon {
+    order: 2;
+    margin: 0 auto;
+  }
+
+  .nav-icon span {
+    font-size: 22px;
+  }
+
+  .main-navlinks {
+    order: 1;
+  }
+
+.hamburger{
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  background: #fafafa;
+  align-items: center;
+  position: relative;
+}
+
+.hamburger span{
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #333;
+  position: absolute;
+  pointer-events: none;
+  transition: opacity 0.3s 0.15s ease-out;
+}
+
+.hamburger span:nth-child(1),.hamburger span:nth-child(3) {
+  transition: transform 0.3s ease-out;
+}
+
+.hamburger span:nth-child(1) {
+  transform: translateY(7px);
+}
+
+.hamburger span:nth-child(3) {
+  transform: translateY(-7px);
+}
+
+.hamburger.open span:nth-child(1){
+  transform: translate(0) rotate(135deg);
+}
+
+.hamburger.open span:nth-child(2){
+  opacity: 0;
+  transition: opacity 0s ease-out;
+}
+
+.hamburger.open span:nth-child(3){
+  transform: translate(0) rotate(-135deg);
+}
+
+  .navlinks-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    background: #fafafa;
+    top: 100%;
+    left: 0;
+    height: 100vh;
+    padding: 15px 50px 15px 20px;
+    border-right: 1px solid #c5c5c6;
+    transform: translate(-100%);
+  }
+
+  .open{
+    transform: translate(0%);
+  }
+
+  .navlinks-container a {
+    font-size: 18px;
+    margin: 10px 0px;
+  }
+
+  .nav-authentification {
+    order: 3;
+  }
+
+  .sign-btns{
+    display: none;
+  }
+
+  .sign-user{
+    display: block;
+    cursor: pointer;
+    border: none;
+  }
+
+  .sign-user img {
+    width: 20px;
+  }
+  
+@media (max-width: 500px) {
+  .nav-icon img {
+    width: 30px;
+  }
+}
+
+.nav-icon span {
+  font-size: 20px;
+}
+
+}
+
+img{
+  width: 20px;
+}
+
+h1,h2,h3 {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: normal;
+  color: white;
+}
+
+a{
+    color: 1D24CA;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+p{
+  color: #3D3B40;
+}
+
+.btn-blue {
+    background-color: blue;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 2px;
+}
+
+.banner {
+    background-image: url(images/banner\ art.jpg);
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 250px 0px;
+    margin: auto;
+}
+
+.banner h1{
+  font-size: 60px;
+  padding: 80px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  background-color: #B3A398;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.1);
+  padding: 18px;
+  border-radius: 3px;
+  margin: 20px;
+}
+
+@media  (max-width: 1500px) {
+  .card-size{
+    width: 20vw;
+  }
+}
+
+
+.footer-container{
+  background-color: #B3A398;
+  width: 100%;
+  padding: 50px 20px 10px;
+}
+
+.sociali-cons{
+  display: flex;
+  justify-content: center;
+  width: 50px;
+}
+
+.social-icons a{
+  text-decoration: none;
+  padding: 10px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+.social-icons a i {
+  font-size: 20px;
+  color: #3D3B40;
+  opacity: 0.9;
+}
+
+.social-icons a:hover i{
+  color: white;
+  transition: 0.5s;
+}
+
+.footernav{
+  margin: 30px 0;
+}
+
+.footernav ul{
+  display: flex;
+  justify-content: center;
+}
+
+.footernav ul li a {
+  color: white;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+
+.footernav p {
+  align-items: center;
+}
